@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Favourites · CineScout</title>
+  <script>document.documentElement.dataset.theme = localStorage.getItem('theme') || 'dark';</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-list="favs">
+  <a class="skip" href="#main">Skip to content</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main" class="container">
+    <div class="page-head">
+      <h1>♥ Favourites</h1>
+      <p class="muted">Movies you love, saved in this browser.</p>
+    </div>
+
+    <div class="toolbar" id="toolbar">
+      <select id="sort" class="select" aria-label="Sort favourites">
+        <option value="added">Recently added</option>
+        <option value="title">Title A–Z</option>
+        <option value="rating">Highest rated</option>
+        <option value="year">Newest first</option>
+      </select>
+      <div class="spacer">
+        <button class="btn ghost small" id="export">Export JSON</button>
+        <button class="btn ghost small" id="clear">Clear all</button>
+      </div>
+    </div>
+
+    <div id="stats" class="stats"></div>
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="data/demo.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/lists.js"></script>
+</body>
+</html>

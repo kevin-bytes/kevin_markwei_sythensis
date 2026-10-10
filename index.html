@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CineScout · Discover your next favourite movie</title>
+  <meta name="description" content="Discover trending and top-rated movies, build a watchlist and keep your favourites.">
+  <script>document.documentElement.dataset.theme = localStorage.getItem('theme') || 'dark';</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main">
+    <section id="hero" class="hero" aria-label="Featured movies"><div class="hero-bg"></div></section>
+
+    <section class="container finder" aria-labelledby="find-title">
+      <h2 id="find-title">Find something to watch</h2>
+      <form action="browse.html" role="search">
+        <input class="input" type="search" name="q" placeholder="Search by title, actor or director…" aria-label="Search movies">
+        <button class="btn" type="submit">Search</button>
+      </form>
+      <div id="genre-chips" class="chips-row" aria-label="Genres"></div>
+    </section>
+
+    <div id="rows" class="container"></div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="data/demo.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
